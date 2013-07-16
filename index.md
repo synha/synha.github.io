@@ -1,6 +1,6 @@
 ---
 layout: default
-title: virajsinha.com - Viraj Sinha
+title: To Webfinity and Beyond!
 ---
 
 {% for post in site.posts %}
