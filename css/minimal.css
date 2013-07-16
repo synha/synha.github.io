@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-  padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding:20px;
+  font:14px/1.5 Helvetica, Arial, sans-serif;
   color:#222;
-  background-image: url('/assets/grey.png');
-  font-weight:300;
+  background-image: url('/assets/escherw.png');
+  font-weight:100;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,16 +14,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+  margin:0 0 10px;
 }
 
 h1, h2, h3 {
   line-height:1.1;
 }
 
-h1 {
+h1, h1 a {
   font-size:28px;
+  color:#343434; 
+  font-weight:500;
 }
+
 
 h2 {
   color:#393939;
@@ -35,7 +38,7 @@ h3, h4, h5, h6 {
 
 a {
   color:#39c;
-  font-weight:400;
+  font-weight:200;
   text-decoration:none;
 }
 
@@ -59,8 +62,13 @@ a:hover small {
   margin:0 auto;
 }
 
-.picture br {
-  height: 50px;
+.pictures {
+  line-height: 100px;
+ }
+
+.pictures img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 blockquote {
@@ -75,7 +83,6 @@ code, pre {
   color:#333;
   font-size:12px;
 }
-
 
 pre {
   padding:8px 15px;
@@ -112,11 +119,23 @@ img {
 
 header {
   float:left;
-  position:fixed;
+  width: 160px;
+}
+
+section {
+  margin-left: 10px;
+  width: 42em;
+  float:right;
+  margin-bottom: 3em;
+}
+
+header, section {
+  padding: 10px; 
   border: 10px;
   border-style: solid;
   border-color: white;
   background-color: white;
+  box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.05);
   overflow: hidden;
 }
 
@@ -183,7 +202,7 @@ header ul a:active {
 
 strong {
   color:#222;
-  font-weight:700;
+  font-weight:500;
 }
 
 header ul li + li {
@@ -202,15 +221,8 @@ header ul a strong {
   color:#222;
 }
 
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-  border: 20px;
-  border-style: solid;
-  border-color: white;
-  background-color: white;
-  overflow: hidden;
+article small {
+  text-align: right
 }
 
 small {
@@ -225,50 +237,61 @@ hr {
 }
 
 footer {
-
-  float:left;
-  position:fixed;
-  bottom:50px;
+  opacity: 0.5;
+  color: black;
+  clear: both;
+  position: relative;
+  float: right;
+  z-index: 10;
+  height: 3em;
+  margin-top: em;;
 }
 
-    body {color:#222;}
-    header { zoom: 1.2; }
-    header h1 { margin-bottom: 5px; }
-    header h1 a { color: #343434; font-weight: bold; }
-    header h3 { margin-top: 20px; margin-bottom: 5px; }
-    header p.view { margin-bottom: 5px; }
-    header p.view small { padding-top: 2px; }
-    header ul {
-      zoom: 0.7;
-      margin-top: 25px;
-    }
-    section p { margin-top: 10px; }
-    section h1 { margin-bottom: 15px; }
-    section h2 { margin-bottom: 10px; }
-    section h2 { margin-bottom: 2px; }
-    footer { bottom: 20px; }
-    footer p { margin-bottom: 5px; }
-    .half-width {
-      float: left;
-      width: 200px;
-      list-style: none;
-      padding: 5px;
-      margin: 7px;
-      margin-bottom: 10px;
-    }
-    .half-width h4 {
-      margin-bottom: 5px;
-    }
-    .half-width ul {
-      padding-left: 0;
-    }
-    .half-width ul li {
-      list-style: inside;
-      font-size: 15px;
-    }
-    .clear-fix {
-      clear: both;
-    }
+/*
+
+body {color:#222;}
+header { zoom: 1.2; }
+header h1 { margin-bottom: 5px; }
+header h1 a { color: #343434; font-weight: bold; }
+header h3 { margin-top: 20px; margin-bottom: 5px; }
+header p.view { margin-bottom: 5px; }
+header p.view small { padding-top: 2px; }
+header ul {
+  zoom: 0.7;
+  margin-top: 25px;
+}
+section p { margin-top: 10px; }
+section h1 { margin-bottom: 15px; }
+section h2 { margin-bottom: 10px; }
+section h2 { margin-bottom: 2px; }
+footer { bottom: 20px; }
+footer p { margin-bottom: 5px; }
+.half-width {
+  float: left;
+  width: 200px;
+  list-style: none;
+  padding: 5px;
+  margin: 7px;
+  margin-bottom: 10px;
+}
+.half-width h4 {
+  margin-bottom: 5px;
+}
+.half-width ul {
+  padding-left: 0;
+}
+.half-width ul li {
+  list-style: inside;
+  font-size: 15px;
+}
+.clear-fix {
+  clear: both;
+}
+
+
+
+*/
+
 
 @media print, screen and (max-width: 960px) {
   
@@ -281,6 +304,7 @@ footer {
     float:none;
     position:static;
     width:auto;
+
   }
   
   header {
@@ -288,10 +312,8 @@ footer {
   }
   
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+    padding-left: 0px;
+    margin:10px 0 10px;
   }
   
   header a small {
