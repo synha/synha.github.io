@@ -4,6 +4,7 @@ body {
   padding:50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#222;
+  background-image: url('/assets/grey.png');
   font-weight:300;
 }
 
@@ -58,6 +59,10 @@ a:hover small {
   margin:0 auto;
 }
 
+.picture br {
+  height: 50px;
+}
+
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
@@ -101,12 +106,17 @@ th {
 
 img {
   max-width:100%;
+  border-top: 10px;
 }
 
 header {
-  width:270px;
   float:left;
   position:fixed;
+  border: 10px;
+  border-style: solid;
+  border-color: white;
+  background-color: white;
+  overflow: hidden;
 }
 
 header ul {
@@ -195,6 +205,11 @@ section {
   width:500px;
   float:right;
   padding-bottom:50px;
+  border: 20px;
+  border-style: solid;
+  border-color: white;
+  background-color: white;
+  overflow: hidden;
 }
 
 small {
@@ -209,17 +224,56 @@ hr {
 }
 
 footer {
-  width:270px;
+
   float:left;
   position:fixed;
   bottom:50px;
 }
 
+    body {color:#222;}
+    header { zoom: 1.2; }
+    header h1 { margin-bottom: 5px; }
+    header h1 a { color: #343434; font-weight: bold; }
+    header h3 { margin-top: 20px; margin-bottom: 5px; }
+    header p.view { margin-bottom: 5px; }
+    header p.view small { padding-top: 2px; }
+    header ul {
+      zoom: 0.7;
+      margin-top: 25px;
+    }
+    section p { margin-top: 10px; }
+    section h1 { margin-bottom: 15px; }
+    section h2 { margin-bottom: 10px; }
+    section h2 { margin-bottom: 2px; }
+    footer { bottom: 20px; }
+    footer p { margin-bottom: 5px; }
+    .half-width {
+      float: left;
+      width: 200px;
+      list-style: none;
+      padding: 5px;
+      margin: 7px;
+      margin-bottom: 10px;
+    }
+    .half-width h4 {
+      margin-bottom: 5px;
+    }
+    .half-width ul {
+      padding-left: 0;
+    }
+    .half-width ul li {
+      list-style: inside;
+      font-size: 15px;
+    }
+    .clear-fix {
+      clear: both;
+    }
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
     width:auto;
-    margin:0;
+    margin:5;   
   }
   
   header, section, footer {
@@ -257,6 +311,7 @@ footer {
   
   header {
     padding:0;
+    background-color: #ffffff;
   }
   
   header ul, header p.view {

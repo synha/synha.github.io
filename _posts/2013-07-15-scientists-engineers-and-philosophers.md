@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Scientists, Engineers, and Philosophers"
-description: ""
-category: 
-tags: []
 ---
-{% include JB/setup %}
 
 Generally speaking, engineers use rules developed by the sciences to build things - to push the behavior of nature as we understand it to its utmost limit, usually for the benefit of humanity.
 

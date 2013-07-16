@@ -4,47 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>{{ page.title }}</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="/css/minimal.css">
   <style>
-    body {color:#222;}
-    header { zoom: 1.2; }
-    header h1 { margin-bottom: 5px; }
-    header h1 a { color: #494949; font-weight: bold; }
-    header h3 { margin-top: 20px; margin-bottom: 5px; }
-    header p.view { margin-bottom: 5px; }
-    header p.view small { padding-top: 2px; }
-    header ul {
-      zoom: 0.7;
-      margin-top: 25px;
-    }
-    section p { margin-top: 10px; }
-    section h1 { margin-bottom: 15px; }
-    section h2 { margin-bottom: 10px; }
-    section h2 { margin-bottom: 2px; }
-    footer { bottom: 20px; }
-    footer p { margin-bottom: 5px; }
-    .half-width {
-      float: left;
-      width: 200px;
-      list-style: none;
-      padding: 5px;
-      margin: 7px;
-      margin-bottom: 10px;
-    }
-    .half-width h4 {
-      margin-bottom: 5px;
-    }
-    .half-width ul {
-      padding-left: 0;
-    }
-    .half-width ul li {
-      list-style: inside;
-      font-size: 15px;
-    }
-    .clear-fix {
-      clear: both;
-    }
+
   </style>
   <script src="https://github.com/themes/minimal/javascripts/scale.fix.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -53,50 +18,29 @@
   <div class="wrapper">
     <header>
       <h1><a href="/">virajsinha.com</a></h1>
+      <hr>
 
-      <h3>Posts</h3>
-      {% for post in site.posts %}
-      
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <small>{{ post.date | date_to_string }}</small>
-      {% endfor %}
+      <p class="view"><a href="/about.html">About</a></p>
+      <p class="view"><a href="/photos.html">Photography</a></p>
 
-      {% if page.repository_url %}
-      <h3>Project Info</h3>
-      <ul>
-        {% if page.zip_url %}
-        <li><a href="{{ page.zip_url }}">Download <strong>ZIP File</strong></a></li>
-        {% endif %}
-        {% if page.tar_url %}
-        <li><a href="{{ page.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-        {% endif %}
-        {% if page.gem_url %}
-        <li><a href="{{ page.gem_url }}">Download <strong>Rubygem</strong></a></li>
-        {% endif %}
-        {% if page.issue_url %}
-        <li><a href="{{ page.issue_url }}">Report<strong>An Issue</strong></a></li>
-        {% endif %}
-        {% if page.repository_url %}
-        <li><a href="{{ page.repository_url }}">Fork On <strong>GitHub</strong></a></li>
-        {% endif %}
-      </ul>
-      {% endif %}
+      <p class="view"><a href="/vsinha_resume.pdf" target="tab" onmouseover="this.innerHTML='Resumé (PDF)'" onmouseout="this.innerHTML='Resumé'">Resumé</a></li>
+      <p class="view"><a href="https://github.com/synha" target="tab">GitHub</a></li>
+      <p class="view"><a href="https://twitter.com/VirajSinha" target="tab">Twitter</a></li>
+      <p class="view"><a href="/rss.xml" target="tab">RSS</a></li>
+      <p class="view"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                      <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a></li>
 
-      <h3>About</h3>
-      <p class="view"><a href="/vsinha_resume.pdf" target="tab">Resumé</a></li>
-        <p class="view"><a href="https://github.com/synha" target="tab">GitHub</a></li>
-          <p class="view"><a href="https://twitter.com/VirajSinha" target="tab">Twitter</a></li>
-          </header>
-          <section id="main">
-            {{ content }}
-          </section>
-          <footer>
-            <!-- <p>This is the site of Danish Khan</p> -->
-            <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a> <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a></small>
+    </header>
+    <section id="main">
+          {{ content }}
+    </section>
+    <footer>
+            <!-- <p>This is the site of Viraj Sinha</p> -->
+            <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> &mdash; Based on theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
             </p>
-          </footer>
-        </div>
+    </footer>
+  </div>
 
         <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-      </body>
-      </html>
+  </body>
+</html>
