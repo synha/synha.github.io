@@ -1,6 +1,6 @@
 ---
 layout: default
-title: To Webfinity and Beyond!
+title: Sinha, Viraj
 ---
 
 {% for post in site.posts %}
