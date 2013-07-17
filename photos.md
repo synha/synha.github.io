@@ -3,8 +3,6 @@ layout: default
 title: virajsinha.com - Viraj Sinha
 ---
 
-<h1>Photos</h1>
-
 <p style="line-height: 100px;">
 	<img src="photos/01.jpg">
 	<img src="photos/02.jpg">
