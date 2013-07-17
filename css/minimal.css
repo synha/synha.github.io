@@ -33,8 +33,9 @@ h1.title{
 h1.title a{
   color:#343434; 
   font: 20px/1.0 Wire One, Helvetica;
-  font-size: 65px;
+  font-size: 58px;
   font-weight:800;
+  letter-spacing: 3px;
 }
 
 h2 {
