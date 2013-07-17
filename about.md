@@ -3,7 +3,7 @@ layout: default
 title: About - vsinha.com
 ---
 
-<img src="photos/07.jpg">
+<img src="photos/02.jpg">
 
 This image is a placeholder... I need an updated self-portrait
 
