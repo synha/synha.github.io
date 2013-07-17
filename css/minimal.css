@@ -137,7 +137,8 @@ header ul {
 header li {
   width:100px;
   float:left;
-  height:35px;
+  height:30px;
+  padding-bottom: 5px;
 }
 
 
@@ -145,8 +146,8 @@ header ul a {
   line-height:1;
   display:block;
   text-align:left;
-  padding-top:6px;
-  height:34px;
+  padding-top:8px;
+  height:25px;
 }
 
 strong {
