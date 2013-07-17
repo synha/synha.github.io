@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sinha, Viraj
+title: Viraj Sinha
 ---
 
 {% for post in site.posts %}

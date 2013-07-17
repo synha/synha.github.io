@@ -21,10 +21,20 @@ h1, h2, h3 {
   line-height:1.1;
 }
 
-h1, h1 a {
+h1{
   font-size:28px;
-  color:#343434; 
   font-weight:500;
+}
+
+h1.title{
+  padding-top: 0px;
+}
+
+h1.title a{
+  color:#343434; 
+  font: 20px/1.0 Wire One, Helvetica;
+  font-size: 65px;
+  font-weight:800;
 }
 
 h2 {
@@ -42,7 +52,7 @@ a {
   text-decoration:none;
 }
 
-a:hover {
+a:hover , .title a:hover{
   color:#069;
 }
 
@@ -119,12 +129,13 @@ img {
 
 header {
   float:left;
-  width: 160px;
+  width: 180px;
 }
 
 section {
-  width: 48em;
+  width: 46em;
   float:right;
+  padding-left:2em;
   margin-bottom: 3em;
 }
 
@@ -137,7 +148,7 @@ header li {
   width:100px;
   float:left;
   height:30px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 
@@ -191,6 +202,12 @@ footer {
     width: auto;
   }
 
+  header {
+    padding:0;
+    width: 100;
+
+  }
+
   header, body {
     word-wrap:break-word;
     padding-left: 2px;
@@ -207,16 +224,11 @@ footer {
 
 @media print, screen and (max-width: 720px) {
 
-  header {
-    padding:0;
-    width: 200;
-  }
-  
   pre, code {
     word-wrap:normal;
   }
 
-  header, section, footer {
+  body, section, footer {
     float:none;
     position:static;
   }

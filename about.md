@@ -1,6 +1,6 @@
 ---
 layout: default
-title: virajsinha.com - Viraj Sinha
+title: About - vsinha.com
 ---
 
 <img src="photos/07.jpg">
