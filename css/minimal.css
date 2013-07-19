@@ -80,14 +80,6 @@ a:hover small {
   margin-right: auto;
 }
 
-.post {
-  width:70%;
-}
-
-.post:hover {
-  width: 100%;
-}
-
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
