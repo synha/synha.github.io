@@ -30,10 +30,10 @@ h1.title{
 
 h1.title a{
   color:#343434; 
-  font: 20px/1.0 Wire One, Helvetica;
-  font-size: 58px;
-  font-weight:800;
-  letter-spacing: 3px;
+  font: 20px/1.0 Palatino Linotype, Helvetica, Arial;
+  font-size: 39px;
+  font-weight:100;
+  letter-spacing: -1px;
 }
 
 h2 {
