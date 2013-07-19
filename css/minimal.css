@@ -191,8 +191,9 @@ footer {
 }
 
 
-@media print, screen and (max-width: 960px) {
+@media print, screen and (max-width: 900px) {
   div.wrapper {
+    margin-left: 10px;
     width:auto;
     margin:5;   
   }
@@ -201,38 +202,17 @@ footer {
     width: auto;
   }
 
+
   header {
-    padding:0;
-    width: 100;
-
-  }
-
-  header, body {
     word-wrap:break-word;
-    padding-left: 2px;
+    padding-right: 15px;
   }
 
-  section {
+  body, section {
     float: none;
     position: static;
-    word-wrap: break-word;
+    word-wrap: normal;
     width: auto;
-  }
-
-}
-
-@media print, screen and (max-width: 720px) {
-
-  pre, code {
-    word-wrap:normal;
-  }
-
-  body, section, footer {
-    float:none;
-    position:static;
-  }
-
-  section {
     padding-left: 0px;
   }
 }
