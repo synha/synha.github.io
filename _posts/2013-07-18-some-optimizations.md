@@ -27,7 +27,7 @@ Let's break this down:
 2. The first font call, for the "Viraj Sinha" at the top of the nav sidebar. Originally it was using a font called Wire One, grabbing it off Google's font api when the index.html loaded.
 3. Base CSS
 4. This is a script included in Jekyll Bootstrap, which I've realized I don't actually need. This is eating a whopping 358ms.
-5. Fetches the CC license image I have in the footer, also takes quite a while evidently
+5. Fetches the Creative Commons license image I have in the footer, evidently takes quite a while.
 6. Another google font API call
 7. Google analytics 
 8. Another theme something?
@@ -40,4 +40,6 @@ This left me with this:
 
 <img src="/assets/speed_after.png">
 
-All that left me with 0.200s to fully loaded. Not bad at all! Having the CC license image saved 208ms alone - although that request happened simultaneously with the javascript load and a font call, so that one fix alone wouldn't have helped nearly as much. A 0.647s decrease in page load time is pretty appreciable, especially if we take mobile browsing experiences into account.
+All that is 0.200s to fully loaded! Not bad at all. Having the CC license image saved 208ms alone - although that request happened simultaneously with the javascript load and a font call, so that one fix alone wouldn't have helped nearly as much. A 0.647s decrease in page load time is pretty appreciable, especially if we take mobile browsing experiences into account.
+
+Furthur improvements: I could (should?) look into css / html minifiers, and reformat all the photos I have on the site for smaller image formats.
