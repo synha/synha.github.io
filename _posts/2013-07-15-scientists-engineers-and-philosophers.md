@@ -11,6 +11,8 @@ Scientists - again, generally - go about observing encoding the behavior of the 
 
 Engineers are sometimes scientists, one good example being finite element analysis of a structure. They're testing an object of nature to see how it behaves. Similarly, scientists are engineers when they build experiments / experimental apparatuses.
 
+<!--more-->
+
 Science feeds into engineering, and engineering feeds into science, as the loop they're a part of plunges ever deeper through the realm of what can be discovered.
 
 As they plunge, both science and engineering throw off technological shrapnel (if you will), in the form of new tech, words, ideas, concepts, etc.
