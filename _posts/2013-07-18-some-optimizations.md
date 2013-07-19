@@ -15,7 +15,7 @@ Because I wanted to have a metric of this process, I started by running a web pa
 
 This was my original result:
 
-<img src="/assets/legend.png">
+<img src="/assets/legend.PNG">
 <img src="/assets/speed_before.png">
 
 
