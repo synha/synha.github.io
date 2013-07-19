@@ -15,8 +15,8 @@ Because I wanted to have a metric of this process, I started by running a web pa
 
 This was my original result:
 
-<img src="/assets/speed/legend.png">
-<img src="/assets/speed/1.png">
+<img src="/assets/legend.png">
+<img src="/assets/speed_before.png">
 
 
 All this takes 0.847s to have the page fully loaded according to webpagetest, represented by the dark blue "document complete" bar.
@@ -38,6 +38,6 @@ I removed the javascript and swapped the font for a more typographically boring 
 
 This left me with this:
 
-<img src="/assets/speed/3.png">
+<img src="/assets/speed_after.png">
 
 All that left me with 0.200s to fully loaded. Not bad at all! Having the CC license image saved 208ms alone - although that request happened simultaneously with the javascript load and a font call, so that one fix alone wouldn't have helped nearly as much. A 0.647s decrease in page load time is pretty appreciable, especially if we take mobile browsing experiences into account.
