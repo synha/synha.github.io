@@ -49,3 +49,6 @@ When a new sentence is input, Cube actually saves *two* markov chains. One forwa
 These two markov chains, forward and reverse, are stored in two separate dicts, which makes this whole model a little trickier to visualize, but bear with me. Now, when we go to generate a sentence, we can start from any word in the corpus and run a markov chain in *both* directions, until each reaches an END token.  This allows for much greater variance in generated text, because there are obviously many more words in the corpus than there are words-preceded-by-END-tokens.
 
 Over time, Cube starts to say some very interesting things indeed.
+
+	viraj: cube
+	cube: the agent started taking out his badge and had anyone used the criticisms box to agree with your fingers
