@@ -71,6 +71,10 @@ The idea of temperature here draws from the analogy that we're cooling a dynamic
 
 Keeping track of the overall lowest energy state for a given system of cities is a metaheuristic technically outside a 'pure' simulated annealer, since in a particle system a given particle has no way to save its state. It's easy in software though, so the rightmost button will move the system to reflect the lowest energy state found so far.
 
+If you're having trouble getting a system to converge to something that looks like the lowest energy state, one technique that works is running the annealer a few times starting from temp = 100 (jumping to the best solution found after each run), and then decreasing the temperature to something lower, like 50, and running it a few more times (again, jumping to the best solution at the end of each run).
+
+--
+
 I just finished taking a CS class called Numerical Methods. We covered various (numerical) methods to solve equations, systems of linear/nonlinear/differential equations, optimization, curve fitting, splines, and simulated annealing.
 
 I'd like to add support for different cooling schedules, the one used in the simulation right now is a simple linear decrease in temperature.
