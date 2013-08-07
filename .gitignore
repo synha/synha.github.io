@@ -8,6 +8,8 @@ Thumbs.db
 
 .rbenv-version
 .rvmrc
+.tex
+.log
+.synctex.gz
 
 .*.un~
-.tex
