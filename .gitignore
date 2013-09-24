@@ -6,10 +6,10 @@ Thumbs.db
 
 !.gitkeep
 
-.rbenv-version
-.rvmrc
-.tex
-.log
-.synctex.gz
+*.rbenv-version
+*.rvmrc
+*.tex
+*.log
+*.synctex.gz
 
 .*.un~
