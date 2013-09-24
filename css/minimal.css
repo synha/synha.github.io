@@ -52,15 +52,16 @@ a {
 }
 
 @-webkit-keyframes rainbow {
-  0% {color: #00A653;} /*green*/
-  50% { color: #0099CC;} /*teal*/
-  100% {color: #00A653;} /*green*/
+  0% {color: #0099CC;} /*green*/
+  50% { color: #00A653;} /*teal*/
+  100% {color: #0099CC;} /*green*/
 }
 
 a:hover , .title a:hover{
   color:#069;
 }
 
+/*
 ul a {
   -webkit-animation: rainbow 20s infinite linear;
   -moz-animation: rainbow 20s infinite  linear;
@@ -70,6 +71,7 @@ a.rainbow {
   -webkit-animation: rainbow 20s infinite linear;
   -moz-animation: rainbow 20s infinite  linear;
 }
+*/
 
 a small {
   font-size:11px;
