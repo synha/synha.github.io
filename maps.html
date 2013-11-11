@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    #map-canvas {
+      width: 650px;
+      height: 650px;
+      margin:10px auto ;
+    }
+
+    .pushbutton {
+      padding-top: 10px;
+    }
+
+    input {
+        margin: 10px;
+        align:left;
+    }
+
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+<section>
+  <div class="centered" id="map-canvas"></div>
+  <div class="centered" id="controls">
+    <input id="address" type="textbox" value="San Jose, CA" onkeypress="if (event.keyCode == 13) codeAddress()"> <br>
+    <input id="roads" type="checkbox" value="RoadLabels" name="checkRoads"> Enable roads in output image <br>
+    <input class="pusbutton" type="button" value="Get image at current location" onclick="simpleDownloadImage()"> <br>
+    <output></output>
+  </div>
+</section>
+
+ <script type="text/javascript">
+
+    var geocoder;
+    var map;
+    var mapType;
+    var container = document.querySelector('#controls');
+    var output = container.querySelector('output');
+    var roadCheck = container.querySelector('#roads');
+
+    function initialize() {
+      geocoder = new google.maps.Geocoder();
+      var latlng = new google.maps.LatLng(37.333, -121.900);
+      var mapOptions = {
+        zoom: 8,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.TERRAIN 
+      };
+      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+      google.maps.event.addListener(map, "maptypeid_changed", function() {
+        var mapType = map.getMapTypeId();
+      });
+    }
+
+    function getCheckboxValue(cb) {
+      if (cb.checked == true) {
+        return "on";
+      }
+      else {
+        return "off";
+      }
+    }
+
+
+    function getMapURL() {
+      var currentPosition = map.getCenter();
+      return "http://maps.google.com/maps/api/staticmap?sensor=false&center=" +
+      currentPosition.lat() + "," + currentPosition.lng() +
+      "&zoom="+map.getZoom() + "&size=640x640&maptype=" + map.getMapTypeId() +
+      "&style=feature:all|element:labels|visibility:" + getCheckboxValue(roadCheck);
+    }
+
+    /*
+    var container = document.querySelector('#container');
+    var typer = container.querySelector('[contenteditable]');
+    var output = container.querySelector('output');
+
+    const MIME_TYPE = 'image/png';
+
+    var downloadFile = function() {
+      window.URL = window.webkitURL || window.URL;
+      mapURL = getMapURL();
+
+      var prevLink = output.querySelector('a');
+      if (prevLink) {
+        window.URL.revokeObjectURL(prevLink.href);
+        output.innerHTML = '';
+      }
+
+      var bb = new Blob([typer.textContent], {type: MIME_TYPE});
+      var bb = new Blob([uint8array], "image/png");
+
+      var a = document.createElement('a');
+      a.download = container.querySelector('input[type="text"]').value;
+      a.href = window.URL.createObjectURL(bb);
+      a.href = mapURL.createObjectURL(bb);
+      a.textContent = 'Download ready';
+
+      a.dataset.downloadurl = [MIME_TYPE, a.download, a.href].join(':');
+      a.draggable = true; // Don't really need, but good practice.
+      a.classList.add('dragout');
+
+      output.appendChild(a);
+
+      a.onclick = function(e) {
+        if ('disabled' in this.dataset) {
+          return false;
+        }
+
+        cleanUp(this);
+      };
+    };
+    */
+
+    const MIME_TYPE = 'image/png';
+
+    function simpleDownloadImage() {
+      var imageURL = getMapURL();
+
+      var prevLink = output.querySelector('a');
+      if (prevLink) {
+        window.URL.revokeObjectURL(prevLink.href);
+        output.innerHTML = '';
+      }
+      var a = document.createElement('a');
+      a.href = imageURL;
+      a.textContent = 'save this link';
+      output.appendChild(a);
+
+    }
+
+
+    function codeAddress() {
+      var address = document.getElementById('address').value;
+      geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          map.setCenter(results[0].geometry.location);
+        } else {
+          alert('Geocode was not successful for the following reason: ' + status);
+        }
+      });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+
+
+</body>
+</html>
