@@ -22,148 +22,379 @@
     }
 
     .pushbutton {
-      padding-top: 10px;
+      padding-top: 0px;
     }
 
     input {
-        margin: 10px;
-        align:left;
+      margin: 10px;
+      align:left;
     }
 
   </style>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-git.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 </head>
 <body>
-<h2 class="centered">CS 334 Terrain Generation Project </h2>
+  <h2 class="centered">CS 334 Terrain Generation Project </h2>
 
-<section>
-  <div class="centered" id="map-canvas"></div>
-  <div class="centered" id="controls">
-    <input id="address" type="textbox" value="San Jose, CA" onkeypress="if (event.keyCode == 13) codeAddress()"> <br>
-    <input id="roads" type="checkbox" value="RoadLabels" name="checkRoads"> Enable roads in output image <br>
-    <input class="pusbutton" type="button" value="Get image at current location" onclick="simpleDownloadImage()"> <br>
-    <output></output>
-  </div>
-</section>
+  <section>
+    <div class="centered" id="map-canvas"></div>
+    <div class="centered" id="controls">
+      <input id="address" type="textbox" value="San Jose, CA" onkeypress="if (event.keyCode == 13) codeAddress()"> <br>
+      <input id="roads" type="checkbox" value="RoadLabels" name="checkRoads"> Enable roads in output image <br>
 
- <script type="text/javascript">
+      <input class="pusbutton" type="button" value="Get image at current location" onclick="simpleDownloadImage()"> 
+      <output></output><br>
 
-    var geocoder;
-    var map;
-    var mapType;
-    var container = document.querySelector('#controls');
-    var output = container.querySelector('output');
-    var roadCheck = container.querySelector('#roads');
+      <input type="text" id="tb_num_samples" style="width:100" value='25'>
+      <input class="pushbutton" type="button" value="Get Elevations" onclick="doElevationRequest()">
+      <elevations></elevations><br>
 
-    function initialize() {
-      geocoder = new google.maps.Geocoder();
-      var latlng = new google.maps.LatLng(37.333, -121.900);
-      var mapOptions = {
-        zoom: 8,
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.TERRAIN 
-      };
-      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      <hr noshade size=1 width="640px">
+      Warning: Use this last button with caution! <br>
+      The Google API limit is 2500 requests/day<br>
+      This will send 64 requests each with 64 points (4096 points total)<br> <br>
+      PLEASE be patient and DO NOT click the button repeatedly!<br>
+      <br> A link will appear when your download is ready <br>
+      <input class="pushbutton" type="button" value="Get Way More Elevations" onclick="doLargeElevationRequest()"> <br>
+      <div id="progressbar"></div>
+      <bigelevations></bigelevations><br>
 
-      google.maps.event.addListener(map, "maptypeid_changed", function() {
-        var mapType = map.getMapTypeId();
-      });
+    </div>
+  </section>
+
+  <script type="text/javascript">
+
+  var geocoder; //to translate english names to lat/long coordinates
+  var map;
+  var elevator; //for elevation service
+  var mapType;
+  var container = document.querySelector('#controls');
+  var output = container.querySelector('output');
+  var elevations = container.querySelector('elevations');
+  var bigelevations = container.querySelector('bigelevations');
+  var roadCheck = container.querySelector('#roads');
+
+  var mapquestURL1 = 'http://open.mapquestapi.com/elevation/v1/profile?key=';
+  var mapquestAPIkey = 'Fmjtd%7Cluubn162ng%2Crl%3Do5-90allf';
+  var mapquestURL2 = '&callback=handleElevationResponse&shapeFormat=raw&latLngCollection='
+  
+  var googleElevationURL = 'http://maps.googleapis.com/maps/api/elevation/json?locations='
+
+  var numPoints = 25;
+
+  function getNumPoints() {
+    numPoints = document.getElementById('tb_num_samples').value;  
+    if( !numPoints.match(/\S/) ) { //check for empty
+      alert("using default value");
+      numPoints = 25;
+    }
+    return numPoints;
+  }
+
+  function handleElevationResponse(response) {
+    var elevationArray = response.elevationProfile;
+
+    console.log("hello");
+    console.log(response);
+
+    var i = 0;
+    for (; i < elevationArray.length; i++) {
+      console.log(elevationArray[i].height);
+    }
+  }
+
+  function elevationRequestURL() {
+    getNumPoints();
+    var numRows = Math.sqrt(numPoints);
+    var numCols = numRows;
+
+    var bounds = map.getBounds();
+    var sw = bounds.getSouthWest();
+    var ne = bounds.getNorthEast();
+    var nw = new google.maps.LatLng(sw.lat(), ne.lng());
+
+    console.log(sw.lat(), sw.lng(), ne.lat(), ne.lng());
+    console.log(nw.lat(), nw.lng());
+
+    var latHeight = ne.lat() - sw.lat();
+    var latInc = latHeight / numRows;
+    var lngWidth = sw.lng() - ne.lng();
+    var lngInc = lngWidth / numCols;
+
+    console.log(latHeight, latInc, numRows, lngWidth, lngInc, numCols);
+    console.log(nw.lat() + (latInc*numRows));
+    console.log(nw.lng() + (lngInc*numCols));
+
+    var coords = new Array();
+    var latitudes = new Array(); //alternating lat and long
+    var longitudes = new Array();
+
+    for (var i = 0; i < numRows; i++) {
+      for (var j = 0; j < numCols; j++) {
+        coords[i*numCols+j] = new google.maps.LatLng(nw.lat() + latInc*i, nw.lng() + lngInc*j);
+      }
     }
 
-    function getCheckboxValue(cb) {
-      if (cb.checked == true) {
-        return "on";
-      }
-      else {
-        return "off";
+    //assemble the URL using the points we have
+    //var URL = mapquestURL1 + mapquestAPIkey + mapquestURL2;
+    var URL = googleElevationURL;
+    for (var i = 0; i < coords.length; i++) {
+      URL += coords[i].lat().toPrecision(10);
+      URL += ',';
+      URL += coords[i].lng().toPrecision(10);
+      if (i < coords.length - 1) {
+        URL += '|';
       }
     }
 
+    URL += '&sensor=false';
 
-    function getMapURL() {
-      var currentPosition = map.getCenter();
-      return "http://maps.google.com/maps/api/staticmap?sensor=false&center=" +
-      currentPosition.lat() + "," + currentPosition.lng() +
-      "&zoom="+map.getZoom() + "&size=640x640&maptype=" + map.getMapTypeId() +
-      "&style=feature:all|element:labels|visibility:" + getCheckboxValue(roadCheck);
+    console.log(URL);
+    console.log("url is: ", URL.length, " characters");
+    if (URL.length > 2048) {
+      alert("Max allowable URL length is 2048 characters");
     }
+    //return URL;
+    return coords;
+  }
 
-    /*
-    var container = document.querySelector('#container');
-    var typer = container.querySelector('[contenteditable]');
-    var output = container.querySelector('output');
+  function doElevationRequest() {
+    //var url = elevationRequestURL();
 
-    const MIME_TYPE = 'image/png';
+    var coords = elevationRequestURL();
 
-    var downloadFile = function() {
-      window.URL = window.webkitURL || window.URL;
-      mapURL = getMapURL();
+    var positionalRequest = {
+      'locations': coords
+    }
+    elevator.getElevationForLocations(positionalRequest, function(results, status) {
+      if (status == google.maps.ElevationStatus.OK) {
+       console.log(results);
 
-      var prevLink = output.querySelector('a');
-      if (prevLink) {
-        window.URL.revokeObjectURL(prevLink.href);
-        output.innerHTML = '';
+       var prevLink = elevations.querySelector('a');
+       if (prevLink) {
+         window.URL.revokeObjectURL(prevLink.href);
+         elevations.innerHTML = '';
+       }
+       var a = document.createElement('a');
+
+       var jsonstring = JSON.stringify(results);
+
+       a.href = 'data:application/x-json;base64,' + btoa(jsonstring);
+       a.download = 'terraingen.JSON';
+       a.textContent = 'Click to download';
+       elevations.appendChild(a);
+     } else {
+       alert('Elevation service failed due to: ' + status);
+     }
+   });
+  }
+
+  var bigjsonstring = "";
+  var numRows = 3;
+  var numCols = 3;
+
+  function doLargeElevationRequest() {
+    var prevLink = elevations.querySelector('a');
+    if (prevLink) {
+       window.URL.revokeObjectURL(prevLink.href);
+       bigelevations.innerHTML = '';
+    } 
+
+    numRows = 64;
+    numCols = 64;
+    counter = 0;
+
+    //do 64 requests of 64 points each
+    bigjsonstring = "";
+
+    for (var i = 0; i < numRows; i++) {
+        bigRequestURL(i);
+      }
+  }
+
+  var counter = 0;
+  function appendToString(i, jsonstring) {
+      //chop bits off as necessary
+      if (i == 0) { //first one, remove ending bracket, append comma
+        jsonstring = jsonstring.substring(0, jsonstring.length - 1);
+        jsonstring += ',';
+      } 
+       else if ( i > 0 &&  i < numRows - 1) { //middle one, remove start and end brackets, append comma
+        jsonstring = jsonstring.substring(1, jsonstring.length - 1);  
+        jsonstring += ',';
+      } 
+       else { //last one, remove start bracket
+        jsonstring = jsonstring.substring(1, jsonstring.length);
+      }
+      //console.log(jsonstring);
+      bigjsonstring += jsonstring;
+
+      counter ++;
+      updateProgressBar(counter);
+      if (counter == numRows) { 
+        setBigElevationLink();
+    }
+  }
+
+  function updateProgressBar(counter) {
+    $( "#progressbar" ).progressbar({
+      value: 37
+    });
+  }
+
+  function setBigElevationLink() {
+    var prevLink = bigelevations.querySelector('a');
+    if (prevLink) {
+       window.URL.revokeObjectURL(prevLink.href);
+       bigelevations.innerHTML = '';
+    } 
+
+    var a = document.createElement('a');
+    a.href = 'data:application/x-json;base64,' + btoa(bigjsonstring);
+    a.download = 'terraingen.JSON';
+
+
+    a.textContent = 'Click to download';
+    bigelevations.appendChild(a);
+  }
+
+   function bigRequestURL(i) {
+      var bounds = map.getBounds();
+      var sw = bounds.getSouthWest();
+      var ne = bounds.getNorthEast();
+      var nw = new google.maps.LatLng(sw.lat(), ne.lng());
+
+      //console.log(sw.lat(), sw.lng(), ne.lat(), ne.lng());
+      //console.log(nw.lat(), nw.lng());
+
+      var latHeight = ne.lat() - sw.lat();
+      var latInc = latHeight / numRows;
+      var lngWidth = sw.lng() - ne.lng();
+      var lngInc = lngWidth / numCols;
+
+      //console.log(latHeight, latInc, numRows, lngWidth, lngInc, numCols);
+      //console.log(nw.lat() + (latInc*numRows));
+      //console.log(nw.lng() + (lngInc*numCols));
+
+      var coords = new Array();
+      for (var j = 0; j < numCols; j++) {
+        coords[j] = new google.maps.LatLng(nw.lat() + latInc*i, nw.lng() + lngInc*j);
       }
 
-      var bb = new Blob([typer.textContent], {type: MIME_TYPE});
-      var bb = new Blob([uint8array], "image/png");
-
-      var a = document.createElement('a');
-      a.download = container.querySelector('input[type="text"]').value;
-      a.href = window.URL.createObjectURL(bb);
-      a.href = mapURL.createObjectURL(bb);
-      a.textContent = 'Download ready';
-
-      a.dataset.downloadurl = [MIME_TYPE, a.download, a.href].join(':');
-      a.draggable = true; // Don't really need, but good practice.
-      a.classList.add('dragout');
-
-      output.appendChild(a);
-
-      a.onclick = function(e) {
-        if ('disabled' in this.dataset) {
-          return false;
+      //assemble the URL using the points we have
+      //var URL = mapquestURL1 + mapquestAPIkey + mapquestURL2;
+      var URL = googleElevationURL;
+      for (var ii = 0; ii < coords.length; ii++) {
+        URL += coords[ii].lat().toPrecision(10);
+        URL += ',';
+        URL += coords[ii].lng().toPrecision(10);
+        if (i < coords.length - 1) {
+          URL += '|';
         }
+      }
 
-        cleanUp(this);
-      };
+      URL += '&sensor=false';
+
+      bigRequest(coords, URL, i);
+
+  }
+
+  function bigRequest(coords, URL, i) { 
+    var positionalRequest = {
+        'locations': coords
+    }
+
+    elevator.getElevationForLocations(positionalRequest, function(results, status) {
+      var jsonstring = "";
+
+      if (status == google.maps.ElevationStatus.OK) {
+
+        jsonstring = JSON.stringify(results);
+        appendToString(i, jsonstring);
+
+
+
+      } else if (status === google.maps.ElevationStatus.OVER_QUERY_LIMIT) {
+        setTimeout(function() { bigRequest(coords, URL, i); }, 200);
+      } else {
+       alert('Elevation service failed due to: ' + status);
+     }
+    }); //end of request
+  }
+
+
+
+
+   function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(37.333, -121.900);
+    var mapOptions = {
+      zoom: 8,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.TERRAIN 
     };
-    */
 
-    const MIME_TYPE = 'image/png';
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    elevator = new google.maps.ElevationService();
 
-    function simpleDownloadImage() {
-      var imageURL = getMapURL();
+    google.maps.event.addListener(map, "maptypeid_changed", function() {
+      var mapType = map.getMapTypeId();
+    });
+  }
 
-      var prevLink = output.querySelector('a');
-      if (prevLink) {
-        window.URL.revokeObjectURL(prevLink.href);
-        output.innerHTML = '';
+  function getCheckboxValue(cb) {
+    if (cb.checked == true) {
+      return "on";
+    }
+    else {
+      return "off";
+    }
+  }
+
+  function getMapURL() {
+    var currentPosition = map.getCenter();
+    return "http://maps.google.com/maps/api/staticmap?sensor=false&center=" +
+    currentPosition.lat() + "," + currentPosition.lng() +
+    "&zoom="+map.getZoom() + "&size=640x640&maptype=" + map.getMapTypeId() +
+    "&style=feature:all|element:labels|visibility:" + getCheckboxValue(roadCheck);
+  }
+
+  const MIME_TYPE = 'image/png';
+
+  function simpleDownloadImage() {
+    var imageURL = getMapURL();
+
+    var prevLink = output.querySelector('a');
+    if (prevLink) {
+      window.URL.revokeObjectURL(prevLink.href);
+      output.innerHTML = '';
+    }
+    var a = document.createElement('a');
+    imageURL += '|.png';  //make it a filename rather than just the URL the google API gives
+    a.href = imageURL;
+    a.download = 'terraingen.png';
+    a.textContent = 'Click to download';
+    output.appendChild(a);
+
+  }
+
+  function codeAddress() {
+    var address = document.getElementById('address').value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
       }
-      var a = document.createElement('a');
-      a.href = imageURL;
-      a.textContent = 'save this link';
-      output.appendChild(a);
+    });
+  }
 
-    }
+  google.maps.event.addDomListener(window, 'load', initialize);
 
-
-    function codeAddress() {
-      var address = document.getElementById('address').value;
-      geocoder.geocode( { 'address': address}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          map.setCenter(results[0].geometry.location);
-        } else {
-          alert('Geocode was not successful for the following reason: ' + status);
-        }
-      });
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-
-  </script>
+</script>
 
 
 </body>
