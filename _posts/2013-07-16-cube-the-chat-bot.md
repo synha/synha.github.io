@@ -27,8 +27,6 @@ Over time, there's overlap in our speech, and these are added to the dict. For i
 	brown fox -> END
 	brown cow -> END
 
-<!--more-->
-
 When prompted to generate a sentence, we starts a markov chain with a random key where the first token is END, and follow it until we encounter another END token, two words at a time. If there are multiple values for a given key tuple, we choose at random. Each new word is appended to the list of words that will comprise our bot-generated text.
 
 It's worth mentioning at this point that the probability of a given next word is stored to the dict as well. For instance if we had "I am fat", "I am fat", and "I am hungry", the values stored would be:
