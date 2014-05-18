@@ -3,8 +3,8 @@ layout: default
 title: About - vsinha.com
 ---
 
-<img src="photos/02.jpg">
-
-This image is a placeholder... I need an updated self-portrait
-
-I'm a student at Purdue University, majoring in computer science. A few of my interests are in neuroscience, computing, biology, and psychology.
+<article>
+<div id="about">
+My name's Viraj. I'm an undergrad at Purdue University, originally from San Jose, California. I'm studying computer science, biology, philosophy, and psychology: I'm interested in the brain, learning how it works, and figuring out how to model it with computers.
+</div>
+</article>
