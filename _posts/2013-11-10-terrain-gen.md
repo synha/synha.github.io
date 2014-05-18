@@ -1,13 +1,10 @@
 ---
 layout: post
-title: "APIs!"
+title: "Terrain Generation"
 description: ""
 category: 
 tags: []
 ---
-It's one of those once-in-a-blue-moon magical links that opens up a whole realm of possiblities on the internet:
-
-It's a [massive list of web APIs](http://www.programmableweb.com/apis/directory)
 
 I've been working on a 3d terrain generation project for my computer graphics class (CS 334). It's supposed to be ambitious without being impossible, as it's the final project of the class and the supposed culmination of everything we've learned this semester. Naturally, it's in the open-ended-pick-your-own-idea style that can be so dangerous and simultaneously so rewarding: pick a project that's over your head, and you'll fall short of your (and the professor's) expectations, your grade will tank, and you'll never find true love. Of course, on the other hand, picking a project that's too easy seems to be a cop-out.
 
@@ -17,17 +14,8 @@ I'd like to implement perlin noise based procedural terrain generation, but that
 <img src="/assets/terrain-gen-tex-map.PNG">
 
 
-
 So to add to that, I would like to offer a simple web interface to download map PNGs using the Google Maps API, and then (also using an API), grab elevation data for the relevant latitude / longitude coordinates. Putting this all together, I'd like to render actual pieces of the planet in 3d, using real elevation data, and with satellite imagery texture mapped on top.
 
-
-Which is where this list of APIs comes in. As great as Google is, it turns out they have some hard limits on how many API calls one can make in a day (2500), and on how many coordinates can be submitted per elevation request (512). 512 coordinates would afford me a 22x22 point square per API call, which is way under the resolutions I'd like to be rendering terrain in (ideally speaking, 512x512).
-
-
-Lucky for me, this link came along at a most fortuitous time. From what I can tell, the mapquest elevation API has no such limits, and I should be able to execute my plan.
-
+So I plan to use the Google Maps API to grab elevation data at various coordinates, and then interpolate for the inbetween points.
 
 I intend on posting again with my results once this project is done, so keep checking back!
-
-
-And for the record, this is at least partially a post so I dont lose the link.
