@@ -16,6 +16,7 @@ body {
 #wrap {
 	width:1024px;
 	padding:10px;
+  margin:0 auto;
 }
 
 h1 a,h1 a:active,h1 a:visited {
