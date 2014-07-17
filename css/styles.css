@@ -71,8 +71,17 @@ article {
 	width:600px;
 }
 
-#about {
-	font-size: 11px;
+#about_photo {
+  width:170px;
+  float:left;
+}
+
+#about_photo img {
+  max-width: 155px;
+}
+
+#about_text {
+	font-size: 12px;
 }
 
 article.link header h2 a,article.link header h2 a:active,article.link header h2 a:visited {
