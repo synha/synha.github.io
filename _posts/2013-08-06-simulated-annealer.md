@@ -29,7 +29,9 @@ Instructions: Click "Start!" first.
 			<td><button onclick="start()">Start!</button></td>
 			<td><button onclick="repick()">Select new cities</button></td>
 			<td><button onclick="resimulate()">Rerun simulation <br>(same cities)</button></td>
+      <!--
 			<td><button onclick="displayFinalSolution()">Jump to best solution <br> found so far</button></td>
+      -->
 		</tr>
 		<!-- for alternate cooling schedules
 		<tr>
