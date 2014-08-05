@@ -186,7 +186,7 @@ function animate(opts) {
 
 		if (temp === 0) {
 			clearInterval(id);
-			//displayFinalSolution();
+			displayFinalSolution();
 		}
 	}, opts.delay || 10);
 
