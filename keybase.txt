@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/vsinha
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://vsinha.com
+  * I am vsinha (https://keybase.io/vsinha) on keybase.
+  * I have a public key with fingerprint 1F74 0BBE 8863 B0AA 1742  BBA5 3D92 77B3 53E7 8BE6
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "1f740bbe8863b0aa1742bba53d9277b353e78be6",
+            "host": "keybase.io",
+            "key_id": "3d9277b353e78be6",
+            "kid": "0101c026f470aa5dd8b691716cf76232114dff6c4b114e59aa9342c123d215921faa0a",
+            "uid": "3b67afc5c42c86ab523c9a12e7bc3d00",
+            "username": "vsinha"
+        },
+        "service": {
+            "hostname": "vsinha.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1421095600,
+    "expire_in": 157680000,
+    "prev": "ad6c7163900549e33bc1ed8128fcb2dd30caac9dc3cbee14d00029a58e822650",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.1
+Comment: https://keybase.io/crypto
+
+yMMxAnicbVJ7UFRVHN5VCUM0IAJmSdFLEThI9/3YEQpHCEVqUiEpmPXce88uN9y9
+++I1PIoaGwcGHLAUGXmUFIUYEppQ2Ao2ICFONpoFNYC6NPSUR2UyROda/dFMf51z
+vt/3fb/z++b36erlOj99fG1B167vKqf0w32b83S7T5OnijFRlYswYzGWC+8dZsVm
+gU67U7G5MSNGmDkaF0XI8ywl4gAQHE2KImAoWSA5TqQYCnK8CFksFstRXZoC2YjA
+BeMUFWHoYVJkhP4PP/deASdwQsJJ1kxzyJ6RZV5kBYIjWMnMsSRFEgQtm82sRIvo
+BhkBAIGiSYkgKZkkGIEkzADgANnl/d1HZDlglhgJcXgWiAxJSQIgSMiJEiXjuEZ0
+QacNWCFi57sUWw7ASmMxhOUrEtQC0Ob4Tz1OUq1IZ3eqblVS9yE8x+22GzWZu8iu
+8QqgaPrHwSQqNhlFiAT50OlSVBtmJBBTciuaJUGTBC4wLI7HYrDQrjihSdEYDMfy
+OK6hdifMR5ZAZiWUAiXgOEMLkKJEiYAyT5C8WRJJWaZwCQBJkCVKEiFEISExKQCG
+hzxJsow2qAs6bCpmZNA3gQVZuhSLDbjznBAr7e/LWqHT++nu81mmLYHO7/6Af1ej
+NeSBJXf3+TVDoVL7tc4HPx//RRRbAnvDXjlhenrn7J4uHZ0y13zyRtrD0Qc3NPpm
+P5NW80N3iXrzakbii89WDRyO94Rbt6Uylg31V8+c3XvEmdEa+XKvZ4odfG15ysZm
+/4igCzt9ekrWVliZwJhcPuVm+sGuW2FtT/74amedJ8m6bGli1+jUzCb667dqJr+c
+bCvN8kQ9tJh9pf7Wndsdvw5unx0+NT79ROTz5/zZHm+jV+/ylg/3H2g4ZpwNsJ7u
++SS2uqep1TAx/+GlG4kN7eO5Jz++GNl/0ZHZGLVppolPXozPnksKuFJlqG3dobzg
+z4cbv1pYWGGY27q5In7suo4wrB8cXvVSVe9tqso+mumYfqP4bMGJb/ST7W+6vd+G
+JNg/SvTZzyTafxtKc5xL61r989rCVYPxcw5P5/qJo+Pu6Jyx9Ep9h+duaHh538Ae
+1YKlRleqPwXPtzCBWb3TbWPHjrx9OGjLH5dHDK0djjND7xvGDzCZJVvDGi60LU29
+c5zby9f5WddNPjofbCgqLPpgZWpymX7N1FHvnXqibkth4GcxG2dGQl3HayJSR+jR
+57qT9hUMuB57BFyqGI0JHt5mejxLGrKbjH+u9CF/n8/4QgjdXX15IT3Qm+b3fdT+
+Zt8y3wI6ojGiTH23pa02+fWgajaJWQcX33sqZ648gbccSglp6r0el1Bz7dD5u38B
+KKqoaQ==
+=3I1l
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vsinha
+
+==================================================================
+
