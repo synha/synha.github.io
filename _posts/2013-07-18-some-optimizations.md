@@ -11,6 +11,9 @@ In what started as a curious experiment, I've made a couple of load speed optimi
 
 Because I wanted to have a metric of this process, I started by running a web page load speed test at webpagetest.org. 
 
+<!--more-->
+
+
 This was my original result:
 
 <img src="/assets/legend.PNG">

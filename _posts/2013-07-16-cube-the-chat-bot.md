@@ -19,6 +19,8 @@ For example if someone were to say "The quick brown fox", it would become:
 	quick brown -> fox
 	brown fox -> END
 
+<!--more-->
+
 Over time, there's overlap in our speech, and these are added to the dict. For instance, if someone were to then say "The quick brown cow", our updated dict would have
 
 	END the -> quick

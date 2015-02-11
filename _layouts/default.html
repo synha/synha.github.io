@@ -21,14 +21,11 @@
 </head>
 
 <body>
-  <div id="headerbar"></div>
+  <div id="headerbar">
+    <canvas id="animation" data-processing-sources="processing_animation/processing_animation.pde"></canvas>
+  </div>
   <div id="container">
     <div id="wrap">
-
-      <ul id="rss">
-        <li class="rss">
-        </li>
-      </ul>
 
       <div id="sidebar">
         <div id="nav">
@@ -50,14 +47,6 @@
           {{ content }}
       </div>
 
-    <!--
-    <footer>
-      <p><small><a href="/rss.xml" target="tab">RSS</a> &mdash; Hosted on <a href="http://pages.github.com">GitHub Pages</a> &mdash; Based on theme by <a href="https://github.com/orderedlist">orderedlist</a> &mdash;
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
-          <img alt="Creative Commons License" style="border-width:0; vertical-align:middle" src="/assets/cc_80x15.png" /></a></small>
-        </p>
-      </footer>
-    -->
   </div>
 </div>
 </body>

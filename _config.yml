@@ -8,6 +8,10 @@ safe: true
 lsi: false
 highlighter: true
 markdown: kramdown
+paginate: 6
+paginate_path: "/page/:num"
+excerpt_separator: <!--more-->
+
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.

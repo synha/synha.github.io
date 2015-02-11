@@ -2,10 +2,10 @@ Ant[] ants = new Ant[25];
 
 float maxV = 0.3;
 int backgroundColor = 255;
-int radius = 20;
+int radius = 10;
 
 void setup() {
-  size(750, 250);
+  size(window.innerWidth, 100);
   background(backgroundColor);
   noStroke();
   smooth();

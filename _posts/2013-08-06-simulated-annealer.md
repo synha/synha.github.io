@@ -6,7 +6,9 @@ category:
 tags: []
 ---
 
-This solves the Traveling Salesman problem for the inputted number of cities. The solution will tend towards the best one as runtime goes to infinity. In practice, this annealer gets good solutions in well under infinite time (although it may take a few runs to converge).
+This little demo attempts to solve the Traveling Salesman problem for the inputted number of cities. The solution will tend towards the best one as runtime goes to infinity. In practice, this annealer gets good solutions in well under infinite time (although it may take a few runs to converge).
+
+<!--more-->
 
 Instructions: Click "Start!" first.
 
