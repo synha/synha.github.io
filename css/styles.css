@@ -40,7 +40,7 @@ h2 {
 
 #headerbar {
   height: 103px;
-  border-top:3px solid #1e87e6;
+  //border-top:3px solid #1e87e6;
 }
 
 #postDate {
@@ -79,6 +79,8 @@ article {
   float:left;
 }
 
+
+
 #about_photo img {
   max-width: 155px;
 }
@@ -113,8 +115,7 @@ a:hover {
   float:left;
   top:40px;
   left:20px;
-  width:160px;
-  //border-right:1px solid #ccc;
+  width:170px;
   padding:20px 20px 0 0;
 }
 
