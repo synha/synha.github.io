@@ -4,6 +4,7 @@ title: "Tracking Stock Volume Anomalies With Grok"
 description: ""
 category: 
 tags: []
+comments: True
 ---
 
 I wrote a blog post on some of my recent work at Numenta, where I'm interning this summer. 

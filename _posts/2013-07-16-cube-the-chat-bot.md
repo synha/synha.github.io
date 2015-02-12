@@ -3,6 +3,7 @@ layout: post
 title: "Cube, the chat bot"
 description: ""
 category: 
+comments: True
 tags: []
 ---
 

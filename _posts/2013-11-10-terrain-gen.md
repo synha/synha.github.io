@@ -3,6 +3,7 @@ layout: post
 title: "Terrain Generation"
 description: ""
 category: 
+comments: True
 tags: []
 ---
 

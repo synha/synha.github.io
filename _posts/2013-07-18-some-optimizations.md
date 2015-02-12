@@ -3,6 +3,7 @@ layout: post
 title: "Some Optimizations"
 description: ""
 category: 
+comments: True
 tags: []
 ---
 
