@@ -2,7 +2,7 @@
 layout: post
 title: "Simulated Annealer"
 description: ""
-category:
+category: tech
 comments: True 
 tags: []
 ---
