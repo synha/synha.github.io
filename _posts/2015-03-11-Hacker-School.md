@@ -19,7 +19,7 @@ As a result, the people around me come from widely varied backgrounds (and age g
 
 Hacker School is not really at all like Fullstack Acadamy, or Dev Bootcamp, or App Academy. Where those programs are primarily focused on the zero-to-sixty of programming--getting people in, up to speed with a given development stack, and then out the door--Hacker school is geared towards giving people with some degree of experience room to play and explore without structure.
 
-Every morning at 10:30 there's check-in, where we break out into the little rooms in weekly choose-your-own groups and go around in a circle, talking about what we did the previous day, and what we plan to do in the current. This is probably the most structured Hacker School gets, and if you miss checkin, no one's coming to hold you accountable.
+Every morning at 10:30 there's check-in, where we break out into the little rooms in weekly choose-your-own groups and go around in a circle, talking about what we did the previous day, and what we plan to do in the current. It's a bit like scrum, for those who've done that. This is probably the most structured Hacker School gets, and if you miss checkin, no one's coming to hold you accountable.
 
 There are also regular seminars and workshops given both by the hacker schoolers and by the 6 more permanent "facilitators", who run the organization. The workshops are based on interest and expertise, where those with the latter can pass information to those with only the former.
 
