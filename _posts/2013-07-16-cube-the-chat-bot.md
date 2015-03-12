@@ -9,6 +9,8 @@ tags: []
 
 My most recent project (besides surviving the 2013 Summer of Math) has been writing a chat bot for the room my friends and I hang out in. It's called Cube, and is written in python (using sleekxmpp).
 
+Here's a [github link](https://github.com/vsinha/cube_bot)
+
 Cube is a markov chain, pseudo-random text generating bot who can say some pretty ridiculous things.
 
 A markov chain takes input text - in this case, directly from our human speech in the chat room - and 'slices' it up into key-value pairs, where the key is a 2-word tuple, and points to a single word value. Cube appends END tokens so we know where to start and stop generating, and stores the resulting python dict.
