@@ -7,7 +7,9 @@ tags: []
 comments: True
 ---
 
-<img src="/assets/hacker-school-pano.jpg">
+<a class="fancybox" rel="group" href="/photos/hacker-school-pano.jpg">
+<img src="/photos/hacker-school-pano.jpg" alt="" />
+</a>
 
 ###What is Hacker School?
 Hacker School is a three month retreat, for programmers and people interested in programming. The 'school' is a floor of a lower Manhattan office building, with a row of desks running down the length of the room, surrounded by office chairs. Several smaller breakout rooms line the room, each labeled with the name of an important contributor to the the computing world--such as Babbage, Church, Lovelace, Turing, and Hopper. 

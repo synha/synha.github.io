@@ -15,7 +15,9 @@ Naturally, it's in the open-ended-pick-your-own-idea style that can be so danger
 
 I'd like to implement perlin noise based procedural terrain generation, but that's pretty straightforward (dare I say "easy") to do. This is a screenshot of where I'm at so far: rendering and manipulating coherent noise, generating a grid of points with appropriate height values, storing said grid in a .obj file, and texture mapping - although my results are a little more pixellated than I'd like.
 
-<img src="/assets/terrain-gen-tex-map.PNG">
+<a class="fancybox" rel="group" href="/photos/terrain-gen-tex-map.PNG">
+<img src="/photos/terrain-gen-tex-map.PNG" alt="" />
+</a>
 
 
 So to add to that, I would like to offer a simple web interface to download map PNGs using the Google Maps API, and then (also using an API), grab elevation data for the relevant latitude / longitude coordinates. Putting this all together, I'd like to render actual pieces of the planet in 3d, using real elevation data, and with satellite imagery texture mapped on top.

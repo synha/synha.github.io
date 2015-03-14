@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "It doesn't matter what you majored in."
+title: "It doesn't matter what you majored in"
 description: ""
 category: 
 tags: []
@@ -20,7 +20,7 @@ Whatever's gotten us here, I'd really like to say: It doesn't matter what you ma
 
 The whole history of subject-specialization has been one where people from seemingly unrelated backgrounds pivot into new fields, and quickly rack up major contributions because they see things in a different way from the homogeneity pervading the field before their arrival.
 
-Tech is possibly the best example of this, for a couple reasons.  The first is an idea I encountered while reading the always-wise ramblings of James Hague over at prog21.dadgum.com. In short, programming knowledge has more potential growing in the fertile substrate of a mind trained in a non-pure-CS field. Hague goes so far as to say that CS shouldn't be offered as a major in undergrad, and people should only be allowed to minor in it, with a real subject as their major.
+Tech is possibly the best example of this, for a couple reasons.  The first is an idea I encountered while reading the always-wise ramblings of James Hague over at [prog21.dadgum.com](prog21.dadgum.com). In short, programming knowledge has more potential growing in the fertile substrate of a mind trained in a non-pure-CS field. Hague goes so far as to say that CS shouldn't be offered as a major in undergrad, and people should only be allowed to minor in it, with a real subject as their major.
 
 The other main key feature with pivoting into tech is the availablility of resources. Learning about computers is one of the best things that can be done with a computer. With other fields, biology for instance, the experts don't spend all day sitting in front of the internet, so there's inherently less of their accumulated knowledge available online in the form of blogs, tutorials, and git repositories.
 
