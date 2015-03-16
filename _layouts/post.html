@@ -2,11 +2,15 @@
 layout: default
 ---
 
-<article>
+<div class="blog-post">
+<h2 class="blog-post-title">{{page.title}}</h2>
+<p class="blog-post-meta">{{ page.date | date_to_string }}</p>
+
+<!-- <article>
 <header>
 	<h2>{{page.title}}</h2>
 	<p id="postDate">{{ page.date | date_to_string }}</p>
-</header>
+</header> -->
 
 {{content}}
 
@@ -15,4 +19,7 @@ layout: default
 {% include comments.html %}
 
 
-</article>
+</div><!-- /.blog-post -->
+
+
+<!-- </article> -->

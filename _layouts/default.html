@@ -1,35 +1,20 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>{{ page.title }}</title>
-  <link rel="icon" href="/favicon.png?v=2" type="image/x-icon">
-  <link rel="stylesheet" href="/css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<link rel="icon" href="/favicon.png?v=2" type="image/x-icon">
 
-  <!-- Add jQuery library -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<title>{{ page.title }}</title>
 
-<!-- Add mousewheel plugin (this is optional) -->
-<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
 
-<!-- Add fancyBox -->
-<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
- <script type="text/javascript">
-  $(document).ready(function() {
-    $(".fancybox").fancybox();
-    $(".fancybox")
-    .attr('rel', 'gallery')
-    .fancybox({
-        padding : 0
-    });
-  });
-
-
-
-</script>
+<!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css" href="/css/newstyles.css">
+<!-- <link rel="stylesheet" href="/css/styles.css"> -->
 
 
 <!-- Optionally add helpers - button, thumbnail and/or media -->
@@ -44,17 +29,70 @@
 </head>
 
 <body>
-  <div id="headerbar">
+<!--   <div id="headerbar">
     <canvas id="animation"></canvas>
-  </div>
-  <div id="container">
+  </div> -->
+
+<!--   <div id="container">
     <div id="wrap">
-    
-      <div id="sidebar">
-        <div id="nav">
-          <h1 id="pageTitle"><a href="/">Viraj Sinha</a></h1>
-          <br>
-          <ul>
+  
+
+      <div id="main">
+          {{ content }}
+      </div>
+  </div>
+</div>
+ -->
+<!-- 
+<a href="/about.html">About</a></li>
+<li><a href="/posts.html">Posts</a></li>
+<li><a href="/photo.html">Photos</a></li>
+<li><a href="/resume.html" target="tab" onmouseover="this.innerHTML='Resume (PDF)'" onmouseout="this.innerHTML='Resume'">Resume</a></li>
+<li><a href="https://github.com/vsinha" target="tab" onmouseover="this.innerHTML='github.com/vsinha'" onmouseout="this.innerHTML='GitHub'">GitHub</a></li>
+<li><a href="https://twitter.com/VirajSinha" target="tab" onmouseover="this.innerHTML='@VirajSinha'" onmouseout="this.innerHTML='Twitter'">Twitter</a>
+ -->
+   <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/posts.html">Posts</a>
+          <a class="blog-nav-item" href="/photo.html">Photos</a>
+          <a class="blog-nav-item" href="/resume.html" target="tab" onmouseover="this.innerHTML='Resume (PDF)'" onmouseout="this.innerHTML='Resume'">Resume</a>
+          <a class="blog-nav-item" href="https://github.com/vsinha" target="tab" onmouseover="this.innerHTML='github.com/vsinha'" onmouseout="this.innerHTML='GitHub'">GitHub</a>
+          <a class="blog-nav-item" href="https://twitter.com/VirajSinha" target="tab" onmouseover="this.innerHTML='@VirajSinha'" onmouseout="this.innerHTML='Twitter'">Twitter</a>
+        </nav>
+      </div>
+    </div>
+
+
+<div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+          {{ content }}
+
+          <nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+          <div class="sidebar-module">
+            <!-- <h4>Archives</h4> -->
+            <h1 id="pageTitle"><a href="/">Viraj Sinha</a></h1>
+
+            <ol class="list-unstyled">
+            <ul class="list-unstyled">
             <li><a href="/about.html">About</a></li>
             <li><a href="/posts.html">Posts</a></li>
             <li><a href="/photo.html">Photos</a></li>
@@ -62,22 +100,47 @@
             <li><a href="https://github.com/vsinha" target="tab" onmouseover="this.innerHTML='github.com/vsinha'" onmouseout="this.innerHTML='GitHub'">GitHub</a></li>
             <li><a href="https://twitter.com/VirajSinha" target="tab" onmouseover="this.innerHTML='@VirajSinha'" onmouseout="this.innerHTML='Twitter'">Twitter</a></li>
           </ul>
-        </div>
-      </div>
+          </div>
+        </div><!-- /.blog-sidebar -->
 
-      <div id="main">
+      </div><!-- /.row -->
 
-          {{ content }}
-          
-      </div>
+    </div><!-- /.container -->
 
-  </div>
-</div>
+
+
 
 <!-- <script src="/js/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
  -->
 
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Add fancyBox -->
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+    $(".fancybox")
+    .attr('rel', 'gallery')
+    .fancybox({
+        padding : 0
+    });
+  });
+</script>
+
+<!-- Google analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
