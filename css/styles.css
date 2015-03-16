@@ -82,7 +82,7 @@ blockquote {
   font-style: italic;
 }
 
-dl, dt, dd, dl p {
+/*dl, dt, dd, dl p {
   font-color: #444;
 }
 
@@ -98,7 +98,7 @@ dl dd {
 dl p {
   padding-left: 20px;
   font-style: italic;
-}
+}*/
 
 hr {
   border:0;
@@ -147,7 +147,7 @@ h4, h5, h6 {
 }
 
 #wrap {
-  width:1024px;
+  width:100%;
   padding:10px;
   margin:0 auto;
   height:100%;
@@ -176,7 +176,7 @@ h4, h5, h6 {
 
 #main {
   float:right;
-  width: 75%;
+  width: 77%;
 }
 
 #postDate {
@@ -185,7 +185,7 @@ h4, h5, h6 {
 
 article {
   float:left;
-  width:90%;
+  width:77%;
 }
 
 article#header {
@@ -229,13 +229,14 @@ pre {
 @media (max-width: 900px) {
   #wrap {
     width:100%;
-    padding:10px;
+    padding:5px;
     /*margin:0 auto;*/
     /*height:100%;*/
   }
 
   #sidebar {
     width:100%;
+    min-width:50px;
   }
 
   #sidebar ul {
