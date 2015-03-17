@@ -8,10 +8,10 @@ comments: True
 ---
 
 <a class="fancybox" rel="group" href="/photos/hacker-school-pano.jpg">
-<img src="/photos/hacker-school-pano.jpg" alt="" />
+<img src="/photos/thumbs/hacker-school-pano.jpg" alt="" />
 </a>
 
-###What is Hacker School?
+##What is Hacker School?
 Hacker School is a three month retreat, for programmers and people interested in programming. The 'school' is a floor of a lower Manhattan office building, with a row of desks running down the length of the room, surrounded by office chairs. Several smaller breakout rooms line the room, each labeled with the name of an important contributor to the the computing world--such as Babbage, Church, Lovelace, Turing, and Hopper. 
 
 I use the word 'school' loosely, it's not really an adequate name for what's going on here. 
@@ -32,14 +32,14 @@ There are also regular seminars and workshops given both by the hacker schoolers
 
 \#neverGraduate.
 
-###The Experience-As-A-Whole
+##The Experience-As-A-Whole
 Four weeks in, I cannot emphasize enough how awesome this program is. This is what university should be like. I've learned more here in 4 weeks than I have in whole semesters of undergrad, both because of the sheer focus granted as well as the beautiful lack of structure. There's an interesting effect at play, with a room of ~60 people all working on at-least-vaguely programming related projects. When I find myself getting distracted, I can almost draw energy from the people around me. Of course I can get this explicity, if I ask questions and get help, and unstick myself from wherever I'm mired. I can also regain focus in a more subtle way, through the vibes of raw concentration in the room. Maybe I was hanging out with the wrong groups in college (I doubt this, s/o to my Purdue buddies), but I never remember being around this many people as engrossed in and excited about their work.
 
 Some current and former Hacker Schoolers have a hard time with this lack of structure. We in general, as modern human beings, are so used to the structure imposed by the school system or by our offices, that when left to our own devices we have no ability to self-mediate or generate focus and direction. Some say that they spent the first third of Hacker School floating, drifting from project to project, in a sense mentally coming to fully grok the actual freedom that Hacker School gives. It's not a stretch to say that even in this float-y case, the time ostensibly wasted was well spent, as a necessary tax for the time to spin up one's ability to work in this sort of unstructured environment. In a way, it's empowering.
 
 
 
-###Projects I've worked on
+##Projects I've worked on
 Traceroute implementation in python. I did this one half for fun, and half in honor of a former hacker-schooler friend of mine who also implemented traceroute, and through whom I came to learn about Hacker School. [Github](https://github.com/vsinha/traceroute).
 
 Haskell primer. I spent a few days working on learning Haskell, doing the first several chapters of the widely acclaimed [CIS-194](http://www.seas.upenn.edu/~cis194/spring13/lectures.html) course, taught by Brent Yorgey. Freenode's #haskell pointed me straight at this course when aksed about learning resources, specifically the Spring 2013 one I've linked. There's a great page [here](https://github.com/bitemyapp/learnhaskell) on more learning resources for Haskell.
