@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Posts - vsinha.com
+layout: page
+title: Posts
 ---
 
 <article>

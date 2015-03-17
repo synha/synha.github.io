@@ -10,7 +10,9 @@ comments: True
 
 I've encountered a few people recently who have been trying to personally pivot. These people are largely in my age group, and mostly seem to have spent the last several years in an academic setting studying various non-computer-related subjects. And they all seem to be trying to get into computers.
 
-My sampling bias is sky high on this one, especially given that I'm currently attending Hacker School, which more or less says "Come here if you're interested in learning more about computers" on the tin. But Hacker School aside, I think the trend is something wider-reaching. <!--more-->People want to get into tech. Programming. CS. Hacking. Software Engineering/Architecting/Gardening. Really whichever aspect of computers you could feel like referring to, there seem to be a lot of people kicking themselves for not having been in tech already.
+My sampling bias is sky high on this one, especially given that I'm currently attending Hacker School, which more or less says "Come here if you're interested in learning more about computers" on the tin. But Hacker School aside, I think the trend is something wider-reaching. People want to get into tech. Programming. CS. Hacking. Software Engineering/Architecting/Gardening. Really whichever aspect of computers you could feel like referring to, there seem to be a lot of people kicking themselves for not having been in tech already.
+
+<!--more-->
 
 It's through the maybe sound-bite tech-pop mantra that "software is eating the world", or an interest in exactly what lies beneath this ocean of complexity in the technology we use today, or even a taking-notice of the sheer profitability of the tech space at-large.
 
