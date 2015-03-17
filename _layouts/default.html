@@ -1,82 +1,52 @@
-<!doctype html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>{{ page.title }}</title>
-  <link rel="icon" href="/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<!DOCTYPE html>
+<html lang="en-us">
 
-  <!-- Add jQuery library -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  {% include head.html %}
 
-<!-- Add mousewheel plugin (this is optional) -->
-<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+  <body class="theme-base-0d">
 
-<!-- Add fancyBox -->
-<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    {% include sidebar.html %}
 
- <script type="text/javascript">
-  $(document).ready(function() {
-    $(".fancybox").fancybox();
-    $(".fancybox")
-    .attr('rel', 'gallery')
-    .fancybox({
-        padding : 0
-    });
-  });
-
-
-
-</script>
-
-
-<!-- Optionally add helpers - button, thumbnail and/or media -->
-<!-- <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script> -->
-
-  <script src="js/atoms.min.js" type="text/javascript"></script>
-</head>
-
-<body>
-  <div id="headerbar">
-    <!-- <canvas id="animation"></canvas> -->
-  </div>
-  <div id="container">
-    <div id="wrap">
-    
-      <div id="sidebar">
-        <div id="nav">
-          <h1 id="pageTitle"><a href="/">Viraj Sinha</a></h1>
-          <br>
-          <ul>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/posts.html">Posts</a></li>
-            <li><a href="/photo.html">Photos</a></li>
-            <li><a href="/resume.html" target="tab" onmouseover="this.innerHTML='Resume (PDF)'" onmouseout="this.innerHTML='Resume'">Resume</a></li>
-            <li><a href="https://github.com/vsinha" target="tab" onmouseover="this.innerHTML='github.com/vsinha'" onmouseout="this.innerHTML='GitHub'">GitHub</a></li>
-            <li><a href="https://twitter.com/VirajSinha" target="tab" onmouseover="this.innerHTML='@VirajSinha'" onmouseout="this.innerHTML='Twitter'">Twitter</a></li>
-          </ul>
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">{{ site.title }}</a>
+            <small>{{ site.tagline }}</small>
+          </h3>
         </div>
       </div>
 
-      <div id="main">
-
-          {{ content }}
-          
+      <div class="container content">
+        {{ content }}
       </div>
+    </div>
 
-  </div>
-</div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-<!-- <script src="/js/instantclick.min.js" data-no-instant></script>
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+
+<script src="/js/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
- -->
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -86,5 +56,6 @@
   ga('create', 'UA-42414984-1', 'vsinha.com');
   ga('send', 'pageview');
 </script>
-</body>
+
+  </body>
 </html>

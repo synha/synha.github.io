@@ -14,7 +14,10 @@ comments: True
 ###What is Hacker School?
 Hacker School is a three month retreat, for programmers and people interested in programming. The 'school' is a floor of a lower Manhattan office building, with a row of desks running down the length of the room, surrounded by office chairs. Several smaller breakout rooms line the room, each labeled with the name of an important contributor to the the computing world--such as Babbage, Church, Lovelace, Turing, and Hopper. 
 
-I use the word 'school' loosely, it's not really an adequate name for what's going on here. <!--more-->
+I use the word 'school' loosely, it's not really an adequate name for what's going on here. 
+
+<!--more-->
+
 There are no classes, no (explicit) teachers, no assignments, and no homework. Instead, the chairs of Hacker School are filled with individuals capable of self-determiniation; people who, when left to their own devices, teach themselves. And explore difficult concepts. And build things for fun. 
 
 The application and acceptance pipeline for Hacker School filters for this sort of mindset. While there is a filter for making sure people know at least some of the basics of programming (including writing FizzBuzz in a favorite language and an online pair-programming interview), the process also really looks for people driving themselves to learn and explore for the sake of it. 
