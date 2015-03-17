@@ -6,7 +6,6 @@ highlighter:         pygments
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-# permalink: /:categories/:year/:month/:day/:title
 relative_permalinks: true
 
 # Setup
@@ -18,7 +17,6 @@ production_url : http://vsinha.com
 
 baseurl:             /
 paginate:            5
-# paginate_path: "/page/:num"
 excerpt_separator: <!--more-->
 
 
@@ -31,8 +29,8 @@ excerpt_separator: <!--more-->
 # About/contact
 author :
   name : Viraj Sinha
-  email : synhapse@gmail.com
-  github : synha
+  email : root@virajos.com
+  github : vsinha
   twitter : VirajSinha
   feedburner : feedname
 
