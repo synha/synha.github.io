@@ -5,6 +5,7 @@ description: ""
 category: 
 tags: []
 comments: True
+image: "hacker-school-pano.jpg"
 ---
 
 <a class="fancybox" rel="group" href="/photos/hacker-school-pano.jpg">
