@@ -12,7 +12,7 @@ relative_permalinks: true
 title: Viraj Sinha
 tagline: 
 url: http://vsinha.com
-baseurl: 
+baseurl: /
 
 paginate: 5
 excerpt_separator: <!--more-->
