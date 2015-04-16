@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "It doesn't matter what you majored in"
+title: "It doesn't matter what you majored in*"
 description: ""
 category: 
 tags: []
@@ -29,3 +29,5 @@ The other main key feature with pivoting into tech is the availablility of resou
 All I really mean to say, at the risk of sounding patronizing, is: don't beat yourself up for being in your 20s, or 30s, or 40s, or whatever, and feeling sad about not having started learning about computers or programming. There's definitely a boatload of information to learn and grok. But there's also plenty of time and resources available and waiting for you. You've figured out that you want to start learning about tech, so you're already on that path. Assuming you've done something  you've found interesting with your past several years on this planet, you will have insight both new and powerful to contribute.
 
 On that note, I'll wrap this up. I've been trying to pivot myself from computers into synthetic biology, and I have an experiment to attend to... maybe I should've majored in biochem.
+
+(\* It also doesn't matter if you didn't go to or didn't finish university.)
