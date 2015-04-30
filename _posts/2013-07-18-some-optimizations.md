@@ -17,10 +17,6 @@ Because I wanted to have a metric of this process, I started by running a web pa
 
 This was my original result:
 
-
-<a class="fancybox" rel="optimize" href="/photos/terrain-gen-tex-map.PNG">
-<img src="/photos/terrain-gen-tex-map.PNG" alt="" />
-</a>
 <a class="fancybox" rel="optimize" href="/photos/speed_before.png">
 <img src="/photos/speed_before.png" alt="" />
 </a>
