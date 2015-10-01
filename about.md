@@ -23,5 +23,13 @@ Eyes: Brown
 
 Hair: Black -->
 
-Student at Purdue University, originally from San Jose, CA.
+Hi.
+
+My name's Viraj, I grew up in San Jose, CA in the heart of Silcion Valley. I recently graduated from Purdue with a degree in CS, specializing in compilers and machine learning, and a triple minor in biology, psychology, and philosophy. I've since never-graduated from [Hacker School](https://www.recurse.com/) (now called Recurse Center) in NYC -- which really gave me a chance to hone my skills and consolidate a lot of what I'd learned during my undergraduate education.
+
+I like to think I'm an aspiring actually-full-stack developer: from transistors all the way up the abstraction to human-computer-interfaces. (This includes the less wide "full stack" of node, js, html...)
+
+I'm interested in a 'ring' of subjects, spanning neuroscience and computer science: how we can build computers which think like the brain, how humans use computers, and how we can use computers to better understand humans and biology.
+
+I'm now looking for a way to apply my skills to help teams (of humans) work more effectively: I believe a team is only as good as its tools, and want to build tools for developers to get things done faster and more effectively.
 
