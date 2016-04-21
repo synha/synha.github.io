@@ -11,8 +11,8 @@ relative_permalinks: false
 # Setup
 title: Viraj Sinha
 tagline: 
-url: http://vsinha.com
-baseurl: http://vsinha.com/
+url: http://blog.vsinha.com
+baseurl: http://blog.vsinha.com/
 
 paginate: 5
 excerpt_separator: <!--more-->
